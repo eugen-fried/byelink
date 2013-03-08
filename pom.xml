@@ -44,7 +44,6 @@
     </modules>
 
     <properties>
-        <hibernate.version>4.1.7.Final</hibernate.version>
         <org.springframework.version>3.1.2.RELEASE</org.springframework.version>
         <org.springsecurity.version>3.1.1.RELEASE</org.springsecurity.version>
         <gae.version>1.7.4</gae.version>
