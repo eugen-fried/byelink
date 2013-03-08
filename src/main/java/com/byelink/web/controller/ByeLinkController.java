@@ -3,6 +3,7 @@ package com.byelink.web.controller;
 import com.byelink.security.domain.AppInstance;
 import com.byelink.security.domain.AuthenticationResolver;
 import com.byelink.security.domain.InvalidSignatureException;
+import com.byelink.web.model.IModelAppender;
 import com.byelink.web.persistence.dao.AppSettings;
 import com.byelink.web.persistence.dao.ByeLinkDao;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -37,6 +38,9 @@ public class ByeLinkController {
 
     @Resource
     private AuthenticationResolver authenticationResolver;
+
+    @Resource
+    private IModelAppender settingsModelAppender;
 
     @RequestMapping(value = "/widgetTest", method = RequestMethod.GET)
     public String widgetTest(Model model) throws IOException {
@@ -117,6 +121,7 @@ public class ByeLinkController {
         response.addCookie(new Cookie("instance", instance));
 
         // add settings model
+        settingsModelAppender.append(model);
 
         return viewSettings(model, width, appInstance.getInstanceId().toString(), locale, origCompId, compId);
     }

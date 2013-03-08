@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>App-Stub Settings</title>
+    <title>Settings</title>
     <link href="http://current.bootstrapcdn.com/bootstrap-v204/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://current.bootstrapcdn.com/bootstrap-v204/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -10,16 +10,24 @@
     <script type="text/javascript" src="http://sslstatic.wix.com/services/js-sdk/1.16.4/js/Wix.js"></script>
 
     <link rel="stylesheet" href="/wix/css/jquery.css">
-    <link href="/css/lightbox.css" type="text/css" rel="stylesheet" />
-    <link href="/wix/css/emphasize.css" type="text/css" rel="stylesheet" />
-    <link href="/wix/css/master.css" type="text/css" rel="stylesheet" />
-    <link href="/wix/css/settings.css" type="text/css" rel="stylesheet" />
-    <link href="/wix/css/604a1af.css" rel="stylesheet" />
+    <link href="http://www.engageya.com/css/lightbox.css" type="text/css" rel="stylesheet" />
+    <link href="http://www.engageya.com/wix/css/emphasize.css" type="text/css" rel="stylesheet" />
+    <link href="http://www.engageya.com/wix/css/master.css" type="text/css" rel="stylesheet" />
+    <link href="http://www.engageya.com/wix/css/settings.css" type="text/css" rel="stylesheet" />
+    <link href="http://www.engageya.com/wix/css/604a1af.css" rel="stylesheet" />
 
-    <!--<script src="/wix/js/jquery.js" type="text/javascript"></script>-->
-    <script src="/wix/js/jquery-ui.js" type="text/javascript"></script>
-    <script src="/wix/js/jquery_002.js" type="text/javascript"></script>
-    <title>Settings</title>
+    <script src="http://www.engageya.com/wix/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="http://www.engageya.com/wix/js/jquery_002.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/jquery-1.8.1.js"></script>
+    <script type="text/javascript">jQuery.noConflict();</script>
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/79853fa.js"></script>
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/mootools-full-1.4.1.js"></script>
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/mootools-more-1.4.0.1.js"></script>
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/lightbox.js"></script>
+    <script type="text/javascript" src="http://www.engageya.com/js/common.js"></script>
+    <script type="text/javascript" src="http://www.engageya.com/wix/js/wixwidget.js"></script>
+
 </head>
 <body style="margin:0px;">
 <div id="symfony-wrapper">
@@ -53,21 +61,9 @@
             <select skinpart="collection" id="langselect"
                     class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox"
                     onChange="applySettings();">
-                <option value="1" selected="selected">English</option>
-                <option value="11">Arabic</option>
-                <option value="31">Basque</option>
-                <option value="12">Chinese</option>
-            </select>
-        </li>
-        <li class="style_setting style_setting_expanded">
-            <label for="settings_mainBg">Website Location:</label>
-            <select skinpart="collection" id="countryselect"
-                    class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox" onChange="applySettings();">
-                <option value="0">Select country</option>
-                <option value="3">United States</option>
-                <option value="41">Cape Verde</option>
-                <option value="42">Cayman Islands</option>
-                <option value="43">Central African</option>
+	            #foreach ($langauge in $languages)
+                    <option value="">${langauge}</option>
+	            #end
             </select>
         </li>
         <li class="style_setting style_setting_expanded">
@@ -76,72 +72,9 @@
                     class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox"
                     onChange="applySettings();">
                 <option selected="" value="0">Select category</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Business & Services --</option>
-                <option style="margin-left:10px;" value="1">Advertising & Marketing</option>
-                <option style="margin-left:10px;" value="2">Cars & Transportation</option>
-                <option style="margin-left:10px;" value="4">Community & Education</option>
-                <option style="margin-left:10px;" value="5">Computing & Apps</option>
-                <option style="margin-left:10px;" value="6">Consulting & Coaching</option>
-                <option style="margin-left:10px;" value="7">Finance & Law</option>
-                <option style="margin-left:10px;" value="8">Health & Beauty</option>
-                <option style="margin-left:10px;" value="10">Home & Garden</option>
-                <option style="margin-left:10px;" value="11">Maintenance Services</option>
-                <option style="margin-left:10px;" value="12">Real Estate & Property</option>
-                <option style="margin-left:10px;" value="13">Religion & Non Profit</option>
-                <option style="margin-left:10px;" value="14">Sports & Games</option>
-                <option style="margin-left:10px;" value="15">Vet & Pets</option>
-                <option style="margin-left:10px;" value="16">Weddings & Events</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Restaurant & Hospitality --</option>
-                <option style="margin-left:10px;" value="17">Bar & Club</option>
-                <option style="margin-left:10px;" value="18">Cafe & Restaurant</option>
-                <option style="margin-left:10px;" value="19">Catering & Entertaining</option>
-                <option style="margin-left:10px;" value="20">Food & Drink</option>
-                <option style="margin-left:10px;" value="21">Hotel & Travel</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Music & Entertainment --</option>
-                <option style="margin-left:10px;" value="22">Actors & Theater</option>
-                <option style="margin-left:10px;" value="23">Bands & Singer</option>
-                <option style="margin-left:10px;" value="24">Dance</option>
-                <option style="margin-left:10px;" value="25">Event Production</option>
-                <option style="margin-left:10px;" value="26">Film</option>
-                <option style="margin-left:10px;" value="27">Musician</option>
-                <option style="margin-left:10px;" value="28">Nightlife</option>
-                <option style="margin-left:10px;" value="29">Performing Arts</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Retail & Fashion --</option>
-                <option style="margin-left:10px;" value="30">Accessories & Jewelry</option>
-                <option style="margin-left:10px;" value="31">Clothing</option>
-                <option style="margin-left:10px;" value="32">Electronics</option>
-                <option style="margin-left:10px;" value="33">Hair & Beauty</option>
-                <option style="margin-left:10px;" value="34">Model</option>
-                <option style="margin-left:10px;" value="35">Other</option>
-                <option style="margin-left:10px;" value="36">Stylist</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Photography --</option>
-                <option style="margin-left:10px;" value="37">Event Photographer</option>
-                <option style="margin-left:10px;" value="38">Pro Photographer</option>
-                <option style="margin-left:10px;" value="39">Sport Photographer</option>
-                <option style="margin-left:10px;" value="40">Travel Photographer</option>
-                <option style="margin-left:10px;" value="41">Wedding Photographer</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Creative Arts --</option>
-                <option style="margin-left:10px;" value="42">Actors & Theater</option>
-                <option style="margin-left:10px;" value="43">Artist</option>
-                <option style="margin-left:10px;" value="44">Author & Writer</option>
-                <option style="margin-left:10px;" value="45">Other</option>
-                <option style="margin-left:10px;" value="46">Painter & Illustrator</option>
-                <option style="margin-left:10px;" value="47">Performing Arts</option>
-                <option style="margin-left:10px;" value="48">Portfolio</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Design --</option>
-                <option style="margin-left:10px;" value="49">Architect & Interiors</option>
-                <option style="margin-left:10px;" value="50">Design Agency</option>
-                <option style="margin-left:10px;" value="51">Designer</option>
-                <option style="margin-left:10px;" value="52">Fashion Designer</option>
-                <option style="margin-left:10px;" value="53">Other</option>
-                <option style="margin-left:10px;" value="54">Portfolio</option>
-                <option style="margin-left:10px;" value="55">Web Designer</option>
-                <option style="font-weight:bold;color:black" disabled="disabled">-- Personal --</option>
-                <option style="margin-left:10px;" value="56">1 Pager</option>
-                <option style="margin-left:10px;" value="57">Kids</option>
-                <option style="margin-left:10px;" value="58">Portfolio</option>
-                <option style="margin-left:10px;" value="59">Resume & CV</option>
-                <option style="margin-left:10px;" value="60">Weddings & Engagement</option>
+	            #foreach ($category in $categories)
+                    <option value="">${category}</option>
+	            #end
             </select>
         </li>
     </ul>
