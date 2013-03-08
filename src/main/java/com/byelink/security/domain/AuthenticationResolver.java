@@ -18,8 +18,8 @@ import java.util.Arrays;
 public class AuthenticationResolver
 {
     // Constants for app key and app secret key  - should be changed once you register your application with Wix Dev center (http://dev.wix.com/app/create-app)
-    private final static String APPLICATION_KEY = "12e1cbb7-5e24-fe10-c03c-7df38acfd547";
-    private final static String APPLICATION_SECRET_KEY = "e62c5c90-7afe-450a-be27-f56c6cb1b148";
+    private final static String APPLICATION_KEY = "12e97d90-14c7-4f58-27b7-f10f2b4b511f";
+    private final static String APPLICATION_SECRET_KEY = "e5bcf4af-e3f4-4402-aa81-a9668ae6a5ee";
 
     private static final String SIGN_ALGORITHM = "HMACSHA256";
     private final Base64 base64;
