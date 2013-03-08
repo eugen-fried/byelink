@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/buylink-persistence" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/byelink/web/persistence/dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/byelink/web/persistence/dto" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/persistence" charset="UTF-8" />
   </component>
 </project>
 

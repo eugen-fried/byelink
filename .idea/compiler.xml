@@ -24,9 +24,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="buylink-persistence" />
-        <module name="buylink-security" />
-        <module name="buylink-web" />
+        <module name="buylink-parent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

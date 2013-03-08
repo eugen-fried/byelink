@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/buylink-parent.iml" filepath="$PROJECT_DIR$/buylink-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/buylink-persistence/buylink-persistence.iml" filepath="$PROJECT_DIR$/buylink-persistence/buylink-persistence.iml" />
-      <module fileurl="file://$PROJECT_DIR$/buylink-security/buylink-security.iml" filepath="$PROJECT_DIR$/buylink-security/buylink-security.iml" />
-      <module fileurl="file://$PROJECT_DIR$/buylink-web/buylink-web.iml" filepath="$PROJECT_DIR$/buylink-web/buylink-web.iml" />
     </modules>
   </component>
 </project>

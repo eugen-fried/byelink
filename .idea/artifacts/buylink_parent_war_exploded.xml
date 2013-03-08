@@ -1,15 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="buylink-web:war exploded">
-    <output-path>$PROJECT_DIR$/buylink-web/target/buylink-web-0.0.1-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="buylink-parent:war exploded">
+    <output-path>$PROJECT_DIR$/target/buylink-parent-0.0.1-SNAPSHOT</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="buylink-web/web/Web" />
+      <element id="javaee-facet-resources" facet="buylink-parent/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="buylink-web" />
+          <element id="module-output" name="buylink-parent" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: co.buylink:buylink-security:0.0.1-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: co.buylink:buylink-persistence:0.0.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: joda-time:joda-time:1.6" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.4" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:r09" />
