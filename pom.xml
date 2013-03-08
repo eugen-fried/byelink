@@ -27,7 +27,7 @@
 
     <properties>
         <!-- todo change to point at your app-engine SDK local installation -->
-        <gae.home>C:\work\appengine-java-sdk-1.7.2.1</gae.home>
+        <gae.home>C:\Users\User\Development\appengine-java-sdk-1.7.5</gae.home>
         <!-- todo change to your app-engine application name (as you registered the application with app-engine) -->
         <gaeApplicationName>wixpostbuylink</gaeApplicationName>
         <gaePluginVersion>0.9.4</gaePluginVersion>
@@ -117,11 +117,11 @@
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>1.7.4</version>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>com.google.appengine</groupId>-->
-        <!--<artifactId>appengine-tools-api</artifactId>-->
-        <!--<version>1.7.4</version>-->
-        <!--</dependency>-->
+        <!--<dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-tools-api</artifactId>
+            <version>1.7.4</version>
+        </dependency>-->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>

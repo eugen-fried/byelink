@@ -38,6 +38,22 @@ public class ByeLinkController {
     @Resource
     private AuthenticationResolver authenticationResolver;
 
+    @RequestMapping(value = "/widgetTest", method = RequestMethod.GET)
+    public String widgetTest(Model model) throws IOException {
+
+        String instance = "A9gE2l2_cykYjWC-hA9-g-_ahSyo8sMnv7VqnlN75N8." +
+                "eyJpbnN0YW5jZUlkIjoiMTJlOTdmYmEtNmFlMy03ZDM4LTg1ZGEtMWE1ZjIw" +
+                "Y2RhNDI2Iiwic2lnbkRhdGUiOiIyMDEzLTAzLTA4VDEwOjQwOjQ3LjI4OC0wNjow" +
+                "MCIsInVpZCI6IjM2YWM1MTRmLWVjMDItNGM3OC04N2NmLTg3ZWE4MDEzY2QxMCIsIn" +
+                "Blcm1pc3Npb25zIjoiT1dORVIiLCJpcEFuZFBvcnQiOiI5MS4xOTkuMTE5LjI1NC81MDM5NCIsImRlbW9Nb2RlIjpmYWxzZX0";
+        String target = "_self";
+        Integer width = 200;
+        String compId = "TPWdgt0";
+        String viewMode = "editor";
+
+        return widget(model, instance, null, target, width, compId, viewMode);
+    }
+
     /**
      * VIEW - Widget Endpoint
      * @link http://dev.wix.com/docs/display/DRAF/App+Endpoints#AppEndpoints-WidgetEndpoint
@@ -53,7 +69,7 @@ public class ByeLinkController {
     @RequestMapping(value = "/widget", method = RequestMethod.GET)
     public String widget(Model model,
                          @RequestParam String instance,
-                         @RequestParam(value = "section-url") String sectionUrl,
+                         @RequestParam(value = "section-url", required = false) String sectionUrl,
                          @RequestParam(required = false) String target,
                          @RequestParam Integer width,
                          @RequestParam String compId,
@@ -61,6 +77,21 @@ public class ByeLinkController {
         AppInstance appInstance = authenticationResolver.unsignInstance(instance);
         return viewWidget(model, sectionUrl, target, width, appInstance.getInstanceId().toString(), compId, viewMode);
 
+    }
+
+    @RequestMapping(value = "/settingsTest", method = RequestMethod.GET)
+    public String settingsTest(Model model, HttpServletResponse response) throws IOException {
+
+        String instance = "A9gE2l2_cykYjWC-hA9-g-_ahSyo8sMnv7VqnlN75N8." +
+                "eyJpbnN0YW5jZUlkIjoiMTJlOTdmYmEtNmFlMy03ZDM4LTg1ZGEtMWE1ZjIw" +
+                "Y2RhNDI2Iiwic2lnbkRhdGUiOiIyMDEzLTAzLTA4VDEwOjQwOjQ3LjI4OC0wNjow" +
+                "MCIsInVpZCI6IjM2YWM1MTRmLWVjMDItNGM3OC04N2NmLTg3ZWE4MDEzY2QxMCIsIn" +
+                "Blcm1pc3Npb25zIjoiT1dORVIiLCJpcEFuZFBvcnQiOiI5MS4xOTkuMTE5LjI1NC81MDM5NCIsImRlbW9Nb2RlIjpmYWxzZX0";
+        Integer width = 200;
+        String compId = "TPWdgt0";
+        String locale = "En";
+
+        return settings(model, response, instance, width, locale, compId, compId);
     }
 
     /**
@@ -84,6 +115,9 @@ public class ByeLinkController {
                            @RequestParam String compId) throws IOException {
         AppInstance appInstance = authenticationResolver.unsignInstance(instance);
         response.addCookie(new Cookie("instance", instance));
+
+        // add settings model
+
         return viewSettings(model, width, appInstance.getInstanceId().toString(), locale, origCompId, compId);
     }
 
