@@ -128,7 +128,7 @@
         $('#signDate').html(Wix.Utils.getSignDate());
 
         settings.styling.color = settings.styling.color || "LightGreen";
-        settings.title = settings.title || "My title";
+        settings.title = settings.title || "Check out our partner's special offers !";
         $('#mainTitle').html('<h2>'+settings.title+'</h2>');
         $('#title').val(settings.title);
         setColorCheckedValue(settings.styling.color);
