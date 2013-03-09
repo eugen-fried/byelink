@@ -35,7 +35,7 @@
 <div id="settings_popup">
 <form action="" method="post" id="settings">
 <div class="box_style top_section inline_block">
-    <a href="http://www.engageya.com/" id="logo" target="_blank"><img src="/wix/images/green_logo.png" alt="Engageya"/></a>
+    <a href="http://www.engageya.com/" id="logo" target="_blank"><img src="/resources/img/logo-tiny.png" alt="ByeLink"/></a>
 
     <div class="connect" style="width: 440px">
         <strong>Our promise:</strong>
