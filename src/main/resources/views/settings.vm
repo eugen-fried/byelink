@@ -96,16 +96,16 @@
     <div class="box_title inline_block">
         <h2><a href="#">Traffic Reports</a></h2>
 
-        <p>Trace your site's traffic through ByeLink</p>
+        <p>Track your site's traffic through ByeLink</p>
     </div>
     <ul class="style_settings_list" style="display: none;">
         <li class="style_setting style_setting_expanded">
             <label style="width: 450px;">Sent to others counter: </label>
-            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">104</span>
+            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">56</span>
         </li>
 	    <li class="style_setting style_setting_expanded">
             <label style="width: 450px;">Received to your site counter: </label>
-            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">26</span>
+            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">136</span>
         </li>
     </ul>
 </div>

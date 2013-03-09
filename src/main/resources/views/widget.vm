@@ -46,26 +46,18 @@
         </div>
         <div class="row">
             <span style="padding: 5px; margin-top: 15px;margin-bottom: 15px;">
-                <a class="btn btn-large btn-inverse" href="#"><img src="/resources/img/1.jpg"
-                                                       onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false"></a>
+                <a class="btn btn-large btn-inverse" href="http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r" target="_blank"><img src="/resources/img/1.jpg" /></a>
             </span>
             <span style="padding: 5px;margin-top: 15px;margin-bottom: 15px;">
-                <a class="btn btn-large btn-inverse" href="#"><img src="/resources/img/2.jpg"
-                                                                   onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false"></a>
+                <a class="btn btn-large btn-inverse" href="http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r" target="_blank"><img src="/resources/img/2.jpg" /></a>
             </span>
         </div>
         <div class="row" style="margin-top: 10px;">
             <span style="padding: 5px; margin-top: 15px;margin-bottom: 15px;">
-                <a href="#">
-                    <a class="btn btn-large btn-inverse" href="#"><img src="/resources/img/3.jpg"
-                                                                       onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false"></a>
-                </a>
+                <a class="btn btn-large btn-inverse" href="http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r" target="_blank"><img src="/resources/img/3.jpg" /></a>
             </span>
             <span style="padding: 5px; margin-top: 15px;margin-bottom: 15px;">
-                <a href="#">
-                    <a class="btn btn-large btn-inverse" href="#"><img src="/resources/img/4.jpg"
-                                                                       onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false"></a>
-                </a>
+                <a class="btn btn-large btn-inverse" href="http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r" target="_blank"><img src="/resources/img/4.jpg" /></a>
             </span>
 	    </div>
     </div>
