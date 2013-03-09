@@ -46,18 +46,30 @@
         </div>
         <div class="row-fluid">
             <div class="span6" style="padding:20px; margin-top: 15px; box-shadow:#ccc 0 0 15px">
-                <strong>Banner 1</strong>
+                <a href="#">
+                    <img src="img/1.jpg"
+                       onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false">
+                </a>
             </div>
             <div class="span6" style="padding:20px; margin-top: 15px; box-shadow:#ccc 0 0 15px">
-                <strong>Banner 2</strong>
+                <a href="#">
+                    <img src="img/2.jpg"
+                         onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false">
+                </a>
             </div>
         </div>
         <div class="row-fluid">
             <div class="span6" style="padding:20px; margin-top: 15px; box-shadow:#ccc 0 0 15px">
-                <strong>Banner 3</strong>
+                <a href="#">
+                    <img src="img/3.jpg"
+                         onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false">
+                </a>
             </div>
             <div class="span6" style="padding:20px; margin-top: 15px; box-shadow:#ccc 0 0 15px">
-                <strong>Banner 4</strong>
+                <a href="#">
+                    <img src="img/4.jpg"
+                         onClick="window.location.href='http://asisalhov.wix.com/toy-store#!winter-sale/c1q6r';return false">
+                </a>
             </div>
         </div>
     </div>
