@@ -37,16 +37,14 @@
 <div class="box_style top_section inline_block">
     <a href="http://www.engageya.com/" id="logo" target="_blank"><img src="/wix/images/green_logo.png" alt="Engageya"/></a>
 
-    <div class="connect">
-        <p>Generate Traffic to your Website for Free!</p>
-
-        <p style="margin-top:5px">The traffic generator app is a FREE user exchange network that drives targeted &
-            relevant visitors to your site.</p>
-        <!--<p style="margin-top:5px">Add the app to your site, customize it to perfectly match your look & feel and define your site's properties to get the best targeted traffic from Engageya.</p> -->
-        <p class="create_account">Drive additional dozens of relevant users<br/>& get traffic reports with Premium plan
-        </p>
-        <a class="connect_button action_links" href="#" onclick="Wix.Settings.openBillingPage();" id="auth_link">Go
-            Premium!</a>
+    <div class="connect" style="width: 440px">
+        <strong>Our promise:</strong>
+        <ul>
+	        <li>We will generate quality traffic to your site after the purchase</li>
+	        <li>Our service will always be <strong>FREE</strong>!</li>
+	        <li>You'll receive a simillar amount of traffic to the traffic diverted from your site.</li>
+	        <li>"<i>The love you make is equal to love you take</i>"</li>
+	    </ul>
     </div>
 </div>
 <div class="opened box_style appearance_settings_box">
@@ -57,6 +55,10 @@
     </div>
     <ul class="style_settings_list">
         <li class="style_setting style_setting_expanded">
+            <label for="name">Store Name:</label>
+            <input id="name" name="name" />
+        </li>
+        <li class="style_setting style_setting_expanded">
             <label for="settings_mainBg">Website Language:</label>
             <select skinpart="collection" id="langselect"
                     class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox"
@@ -64,6 +66,17 @@
 	            #foreach ($langauge in $languages)
                     <option value="">${langauge}</option>
 	            #end
+            </select>
+        </li>
+        <li class="style_setting style_setting_expanded">
+            <label for="settings_mainBg">Website Location:</label>
+            <select skinpart="collection" id="countryselect"
+                    class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox" onChange="applySettings();">
+                <option value="0">Select country</option>
+                <option value="3">United States</option>
+                <option value="41">Cape Verde</option>
+                <option value="42">Cayman Islands</option>
+                <option value="43">Central African</option>
             </select>
         </li>
         <li class="style_setting style_setting_expanded">
@@ -79,12 +92,27 @@
         </li>
     </ul>
 </div>
-<div class="box_style style_settings_box">
+<div class="box_style reports_settings_box">
     <div class="box_title inline_block">
-        <h2><a href="#">Style</a></h2>
+        <h2><a href="#">Traffic Reports</a></h2>
 
-        <p>Set your app color and style</p>
+        <p>Trace your site's traffic through ByeLink</p>
     </div>
+    <ul class="style_settings_list" style="display: none;">
+        <li class="style_setting style_setting_expanded">
+            <label style="width: 450px;">Sent to others counter: </label>
+            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">104</span>
+        </li>
+	    <li class="style_setting style_setting_expanded">
+            <label style="width: 450px;">Received to your site counter: </label>
+            <span style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">26</span>
+        </li>
+    </ul>
+</div>
+<div class="box_style advance_settings_box">
+<div class="box_title inline_block">
+    <h2><a href="#">Widget Styling</a></h2>
+</div>
     <ul class="style_settings_list" style="display: none;">
         <li class="style_setting">
             <label for="settings_mainBg">Layout type:</label>
@@ -98,36 +126,6 @@
                 <option value="10">Rotating large images</option>
                 <option value="22">Bulleted titles + hover effect</option>
                 <option value="15">Bulleted titles, plain</option>
-            </select>
-        </li>
-        <li class="style_setting">
-            <label for="settings_mainBg">Font:</label>
-            <!--<select skinpart="collection" id="fontselect" class="wysiwyg_editor_skins_inputs_ComboBoxSkin-collection SelectBox" onChange="applySettings();">-->
-            <select style="display: none;" id="fonts">
-                <!--<option value="0">Select font</option>-->
-                <option value="Antiqua">Antiqua</option>
-                <option value="Arial">Arial</option>
-                <option value="Avqest">Avqest</option>
-                <option value="Blackletter">Blackletter</option>
-                <option value="Calibri">Calibri</option>
-                <option value="Comic Sans">Comic Sans</option>
-                <option value="Courier">Courier</option>
-                <option value="Decorative">Decorative</option>
-                <option value="Fraktur">Fraktur</option>
-                <option value="Frosty">Frosty</option>
-                <option value="Garamond">Garamond</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Impact">Impact</option>
-                <option value="Minion">Minion</option>
-                <option value="Modern">Modern</option>
-                <option value="Monospace">Monospace</option>
-                <option value="Palatino">Palatino</option>
-                <option value="Roman">Roman</option>
-                <option value="Script">Script</option>
-                <option value="Swiss">Swiss</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
             </select>
         </li>
         <li class="style_setting">
@@ -152,548 +150,26 @@
             <label for="settings_blocksBgOpacity">Transparent</label>
         </li>
     </ul>
+<div style="clear: both;"></div>
 </div>
 <div class="box_style facebook_box">
     <div class="box_title inline_block">
-        <h2><a href="#"><img src="http://dev.engageya.com/images/widgets/social_facebook.png"/> Promote your Facebook
-            fan page</a></h2>
-    </div>
-    <ul class="style_settings_list" style="display: none;">
-        <li style="padding: 0px 3px;">
-            <div style="font-size: 15px;color: #000000;font-weight: bold;padding: 15px 0px 10px 0px;">
-                Insert your Facebook fan page URL
-            </div>
-            <input type="text" id="facebookField" class="wysiwyg_editor_skins_inputs_InputSkin-input HeaderBox"
-                   style="width: 344px;height: 19px;"/>
-            <a class="action_links_two"
-               style="background:#aaaaaa;color:#7f7f7f !important;border:0px;display: inline-block;cursor: pointer;float: right;margin: -32px 116px 0px 0px;">Save</a>
-            <span style="display:block;text-align: left;font-size: 12px;color: #BBBBBB !important;font-weight: bold;margin-top: 6px;font-style: italic;">e.g. http://www.facebook.com/pages/mypage/</span>
-
-            <p style="padding: 10px 0px;color: #3a3a3a;font-size: 13px;">
-                Get more users to your Facebook fan page through Engageya's traffic generator.<br>
-                <br>Promoting your Facebook fan page is available only for <a style="font-weight:bold;"
-                                                                              onclick="Wix.Settings.openBillingPage();">Premium</a>
-                apps
-                <a class="connect_button action_links" href="#" onclick="Wix.Settings.openBillingPage();"
-                   id="auth_link">Go Premium!</a>
-                <br><br>
-                Once you submit your fan page URL, Engageya indexes your Facebook posts so they appear as content
-                recommendations within the Engageya app - in your site as well as in the entire network.
-            </p>
-        </li>
-    </ul>
-</div>
-<div class="box_style reports_settings_box">
-    <div class="box_title inline_block">
-        <h2><a href="#">Traffic Reports</a></h2>
-
-        <p>Trace your site's traffic through Engageya</p>
+        <h2><a href="#">My Offering</a></h2>
     </div>
     <ul class="style_settings_list" style="display: none;">
         <li class="style_setting style_setting_expanded">
-            <label for="settings_mainBg" style="width: 450px;">Engageya traffic tracking and reports are available only
-                for <a style="font-weight:bold;" onclick="Wix.Settings.openBillingPage();">Upgrade plan</a>.</label>
-
-            <div style="line-height:5px; padding-left: 20px; padding-bottom: 15px;">Upgrade your Engageya Traffic
-                Generator to get more traffic and view reports.
-            </div>
+            <label for="offeringText">Offering Text:</label>
+            <input id="offeringText" name="offeringText" />
+        </li>
+        <li class="style_setting style_setting_expanded">
+            <label for="offeringImage">Offering Image:</label>
+            <img src="/resources/img/3.jpg" id="offeringImage" />
+        </li>
+        <li class="style_setting style_setting_expanded">
+            <label for="offeringLink">Offering Link:</label>
+            <input id="offeringLink" name="offeringLink" />
         </li>
     </ul>
-</div>
-<div class="box_style advance_settings_box">
-<div class="box_title inline_block">
-    <h2><a href="#">Advanced</a></h2>
-</div>
-<ul class="style_settings_list" style="display: none;">
-<li class="style_setting style_setting_expanded">
-<label for="settings_mainBg" style="line-height:20px; width: 350px;">Show links to sites from the following
-    categories: </label>
-
-<div style="line-height:2px; padding-left: 20px; font-size: smaller; color: #404040;">(it will take up to 4
-    hours)
-</div>
-<div style="height:198px; width: 210px; overflow-y: scroll; overflow-x : hidden; border: 1px solid #cccccc; float: right; margin-right:20px; margin-bottom:10px;">
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Business &
-    Services</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_1"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="1" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_1">Advertising & Marketing</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_2"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="2" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_2">Cars & Transportation</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_3"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="4" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_3">Community & Education</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_4"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="5" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_4">Computing & Apps</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_5"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="6" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_5">Consulting & Coaching</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_6"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="7" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_6">Finance & Law</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_7"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="8" checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_7">Health & Beauty</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_8"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="10"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_8">Home & Garden</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_9"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="11"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_9">Maintenance Services</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_10"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="12"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_10">Real Estate & Property</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_11"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="13"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_11">Religion & Non Profit</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_12"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="14"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_12">Sports & Games</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_13"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="15"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_13">Vet & Pets</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_14"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="16"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_14">Weddings & Events</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Restaurant &
-    Hospitality</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_15"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="17"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_15">Bar & Club</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_16"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="18"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_16">Cafe & Restaurant</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_17"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="19"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_17">Catering & Entertaining</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_18"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="20"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_18">Food & Drink</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_19"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="21"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_19">Hotel & Travel</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Music &
-    Entertainment</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_20"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="22"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_20">Actors & Theater</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_21"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="23"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_21">Bands & Singer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_22"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="24"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_22">Dance</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_23"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="25"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_23">Event Production</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_24"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="26"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_24">Film</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_25"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="27"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_25">Musician</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_26"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="28"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_26">Nightlife</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_27"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="29"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_27">Performing Arts</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Retail &
-    Fashion</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_28"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="30"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_28">Accessories & Jewelry</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_29"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="31"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_29">Clothing</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_30"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="32"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_30">Electronics</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_31"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="33"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_31">Hair & Beauty</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_32"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="34"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_32">Model</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_33"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="35"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_33">Other</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_34"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="36"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_34">Stylist</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Photography</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_35"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="37"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_35">Event Photographer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_36"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="38"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_36">Pro Photographer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_37"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="39"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_37">Sport Photographer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_38"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="40"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_38">Travel Photographer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_39"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="41"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_39">Wedding Photographer</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Creative Arts</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_40"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="42"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_40">Actors & Theater</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_41"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="43"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_41">Artist</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_42"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="44"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_42">Author & Writer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_43"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="45"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_43">Other</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_44"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="46"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_44">Painter & Illustrator</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_45"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="47"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_45">Performing Arts</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_46"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="48"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_46">Portfolio</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Design</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_47"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="49"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_47">Architect & Interiors</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_48"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="50"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_48">Design Agency</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_49"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="51"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_49">Designer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_50"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="52"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_50">Fashion Designer</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_51"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="53"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_51">Other</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_52"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="54"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_52">Portfolio</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_53"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="55"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_53">Web Designer</label></p>
-
-<p style="padding-left: 10px; padding-bottom: 4px; margin-top: 7px; font-weight:bold;">Personal</p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_54"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="56"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_54">1 Pager</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_55"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="57"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_55">Kids</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_56"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="58"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_56">Portfolio</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_57"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="59"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_57">Resume & CV</label></p>
-
-<p style="padding-left: 10px; padding-top: 4px; padding-bottom: 4px;"><input type="checkbox"
-                                                                             id="settings_category_58"
-                                                                             name="settings[blocksBgOpacity]"
-                                                                             value="60"
-                                                                             checked="checked"
-                                                                             onclick="applySettings();"/><label
-        for="settings_category_58">Weddings & Engagement</label></p>
-</div>
-<input type="hidden" id="catsnum" name="catsnum" value="58"/>
-</li>
-</ul>
-<div style="clear: both;"></div>
 </div>
 <input type="hidden" id="settings__token" name="settings[_token]" value="c396ae167c930f0c2d75c337da0b28e704d88832"/>
 <input type="submit" value="Done" class="action_links save_settings" style="display: none;"/>
